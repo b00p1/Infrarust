@@ -28,11 +28,13 @@ impl ProtocolVersion {
     pub const MINECRAFT_1_21_2: Self = Self(768);
     /// Minecraft 1.21.4 (protocol 769)
     pub const MINECRAFT_1_21_4: Self = Self(769);
+    /// Minecraft 26.1 (protocol 775)
+    pub const MINECRAFT_26_1: Self = Self(775);
 
     /// The minimum protocol version supported by this proxy.
     pub const MINIMUM_SUPPORTED: Self = Self::MINECRAFT_1_20_4;
     /// The maximum protocol version supported by this proxy.
-    pub const MAXIMUM_SUPPORTED: Self = Self::MINECRAFT_1_21_4;
+    pub const MAXIMUM_SUPPORTED: Self = Self::MINECRAFT_26_1;
 
     /// Creates a `ProtocolVersion` from a raw protocol number.
     pub const fn new(version: i32) -> Self {
@@ -67,6 +69,7 @@ impl fmt::Display for ProtocolVersion {
             Self::MINECRAFT_1_21 => write!(f, "1.21 (767)"),
             Self::MINECRAFT_1_21_2 => write!(f, "1.21.2 (768)"),
             Self::MINECRAFT_1_21_4 => write!(f, "1.21.4 (769)"),
+            Self::MINECRAFT_26_1 => write!(f, "26.1 (775)"),
             Self(v) => write!(f, "Unknown({v})"),
         }
     }

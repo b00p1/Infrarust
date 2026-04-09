@@ -86,6 +86,8 @@ impl ProtocolVersion {
     pub const V1_21_9: Self = Self(773);
     /// Minecraft 1.21.11
     pub const V1_21_11: Self = Self(774);
+    /// Minecraft 26.1
+    pub const V1_26_1: Self = Self(775);
 
     /// All supported protocol versions, sorted in ascending order.
     ///
@@ -126,6 +128,7 @@ impl ProtocolVersion {
         Self::V1_21_7,
         Self::V1_21_9,
         Self::V1_21_11,
+        Self::V1_26_1,
     ];
 
     /// Returns `true` if `self >= other`.
@@ -201,6 +204,7 @@ impl ProtocolVersion {
             Self::V1_21_7 => "1.21.7",
             Self::V1_21_9 => "1.21.9",
             Self::V1_21_11 => "1.21.11",
+            Self::V1_26_1 => "26.1",
             _ => "unknown",
         }
     }
